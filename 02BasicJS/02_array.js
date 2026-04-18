@@ -9,9 +9,11 @@ const dcHeros = ["superman","batman","flash"]
 
 // const allHeros = marvelHeros.concat(dcHeros)
 // console.log(allHeros);
+//const allNewHeros = {marvelHeros,dcHeros}
 
 // spread operator
-const allNewHeros = [...marvelHeros, ...dcHeros]
+//const allNewHeros = [...marvelHeros, ...dcHeros]
+
 console.log(allNewHeros);
 
 //
