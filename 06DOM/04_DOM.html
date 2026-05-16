@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body style ="background-color:#212121; color: #fff;">
+
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const listItemAdd = document.createElement('li');
+        listItemAdd.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(listItemAdd)
+    }
+    addLanguage("Python")
+
+    // optimized way
+    function optimizedlistItemAdd(langName) {
+        const listItemAdd = document.createElement("li")
+        // //Expanded
+        // const addTextNode = document.createTextNode(langName)
+        // listItemAdd.appendChild(addTextNode)
+
+        //shortcut
+        listItemAdd.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(listItemAdd)
+    }
+    optimizedlistItemAdd("C")
+    optimizedlistItemAdd("C++")
+
+
+    // Editing a dom
+    const editinList = document.querySelector("li:nth-child(2)")
+
+    // edit using innerHTML
+    //editinList.innerHTML = "golang"
+
+    // edit Creating a new element
+    const newList = document.createElement("li")
+    newList.textContent = "golang"
+    editinList.replaceWith(newList)
+
+    const editFirst = document.querySelector("li:first-child")
+    editFirst.outerHTML = "<li>TypeScript</li>"
+
+    // Remove list element
+    const removingElement = document.querySelector("li:last-child")
+    removingElement.remove()
+</script>
+</html>
