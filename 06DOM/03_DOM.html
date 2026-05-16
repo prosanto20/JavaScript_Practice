@@ -16,5 +16,15 @@
     //divElement.id = Math.random()*10 +1
     divElement.id = Math.round(Math.random()*10 +1)
 
+    divElement.setAttribute("title","generate a title")
+    divElement.style.backgroundColor = "green"
+    divElement.style.padding = "15px"
+    //divElement.innerText = "Pro Code"
+
+    const addText = document.createTextNode("Creating div")
+    divElement.appendChild(addText)
+
+    document.body.appendChild(divElement)
+
 </script>
 </html>
